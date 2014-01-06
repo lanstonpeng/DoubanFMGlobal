@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "DouFM Global Controller",
+  "description": "Control Your DoubanFM in any page",
+  "version": "1.0",
+  "page_action": {
+    "default_icon":{
+      "19": "icon.png" 
+    },
+    "default_title":"test_title"
+  },
+  "content_scripts":[{
+      "matches":["http://*/*"],
+      "js":["douFM.js"]
+    }
+  ],
+  "background": {
+     "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*"
+  ]
+}
